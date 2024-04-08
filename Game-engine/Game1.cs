@@ -2,86 +2,55 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Game_engine;
-
-
-public class Game1 : Game
+namespace Game_engine
 {
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
-
-
-
-    private Texture2D _background;
-    private Texture2D _ship;
-    private Vector2 _shipPosition;
-    private float _shipSpeed;
-
-
-
-
-    public Game1()
+    public class Game1 : Game
     {
-        _graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
-    }
+        private GraphicsDeviceManager _graphics;
+        private SpriteBatch _spriteBatch;
+        private Texture2D _background;
+        private Ship _ship;
 
-    protected override void Initialize()
-    {
-
-        _shipPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
-
-        _shipSpeed = 5.0f;
-        // TODO: Add your initialization logic here
-
-        base.Initialize();
-    }
-
-    protected override void LoadContent()
-    {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-        _background = Content.Load<Texture2D>("stars");
-        _ship = Content.Load<Texture2D>("ship");
-
-
-
-        // TODO: use this.Content to load your game content here
-    }
-
-    protected override void Update(GameTime gameTime)
-    {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
-
-
-            KeyboardState keyboardState = Keyboard.GetState();
-        if (keyboardState.IsKeyDown(Keys.A))
+        public Game1()
         {
-            _shipPosition.X -= _shipSpeed;
-        }
-        if (keyboardState.IsKeyDown(Keys.D))
-        {
-            _shipPosition.X += _shipSpeed;
+            _graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            IsMouseVisible = true;
         }
 
-        // TODO: Add your update logic here
+        protected override void Initialize()
+        {
+            _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2), 5.0f);
 
-        base.Update(gameTime);
-    }
+            base.Initialize();
+        }
 
-    protected override void Draw(GameTime gameTime)
-    {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        protected override void LoadContent()
+        {
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            _background = Content.Load<Texture2D>("stars");
+        }
 
-        // TODO: Add your drawing code here
+        protected override void Update(GameTime gameTime)
+        {
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
 
-        _spriteBatch.Begin();
-        _spriteBatch.Draw(_background, Vector2.Zero, Color.White);
-        _spriteBatch.Draw(_ship, _shipPosition, Color.White);
-        _spriteBatch.End();
+            _ship.Update(gameTime);
 
-        base.Draw(gameTime);
+            base.Update(gameTime);
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            _spriteBatch.Begin();
+            _spriteBatch.Draw(_background, Vector2.Zero, Color.White);
+            _ship.Draw(_spriteBatch);
+            _spriteBatch.End();
+
+            base.Draw(gameTime);
+        }
     }
 }
