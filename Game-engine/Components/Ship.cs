@@ -29,12 +29,23 @@ namespace Game_engine
             {
                 _position.X += _speed;
             }
+
+
+            if (_position.X < 0)
+            {
+                _position.X = 0;
+            }
+            else if (_position.X > Globals.SCREEN_WIDTH - _texture.Width)
+            {
+                _position.X = Globals.SCREEN_WIDTH - _texture.Width;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, _position, Color.White);
         }
+
     }
 }
 

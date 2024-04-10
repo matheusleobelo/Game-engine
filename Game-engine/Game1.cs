@@ -11,18 +11,28 @@ namespace Game_engine
         private Texture2D _background;
         private Ship _ship;
 
+
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            _graphics.PreferredBackBufferWidth = 531;
+            _graphics.PreferredBackBufferHeight = 885;
+            _graphics.ApplyChanges();
         }
 
         protected override void Initialize()
         {
-            _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2), 5.0f);
-
             base.Initialize();
+
+            Globals.SCREEN_WIDTH = _graphics.PreferredBackBufferWidth;
+            Globals.SCREEN_HEIGHT = _graphics.PreferredBackBufferHeight;
+
+            _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 130), 5.0f);
+
         }
 
         protected override void LoadContent()
