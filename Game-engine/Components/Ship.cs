@@ -17,6 +17,11 @@ namespace Game_engine
             _speed = speed;
         }
 
+        // public void Initialize()
+        // {
+        //     Globals.SHIP_WIDTH = _texture.Width;
+        // }
+
         public void Update(GameTime gameTime)
         {
             KeyboardState keyboardState = Keyboard.GetState();
