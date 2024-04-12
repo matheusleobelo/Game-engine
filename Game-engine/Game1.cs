@@ -57,6 +57,8 @@ namespace Game_engine
             _ship.Update(gameTime);
             _spider.Update(gameTime);
 
+            _ship.HasCollided(_spider);
+
         }
 
         protected override void Draw(GameTime gameTime)

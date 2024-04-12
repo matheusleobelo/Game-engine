@@ -10,6 +10,7 @@ namespace Game_engine
         private Vector2 _position;
         private float _speed;
 
+
         public Ship(Texture2D texture, Vector2 position, float speed)
         {
             _texture = texture;
@@ -17,10 +18,6 @@ namespace Game_engine
             _speed = speed;
         }
 
-        // public void Initialize()
-        // {
-        //     Globals.SHIP_WIDTH = _texture.Width;
-        // }
 
         public void Update(GameTime gameTime)
         {
@@ -33,6 +30,14 @@ namespace Game_engine
             if (keyboardState.IsKeyDown(Keys.D))
             {
                 _position.X += _speed;
+            }
+            if (keyboardState.IsKeyDown(Keys.W))
+            {
+                _position.Y -= _speed;
+            }
+            if (keyboardState.IsKeyDown(Keys.S))
+            {
+                _position.Y += _speed;
             }
 
 
@@ -51,6 +56,34 @@ namespace Game_engine
             spriteBatch.Draw(_texture, _position, Color.White);
         }
 
+        public Rectangle GetBounds()
+        {
+            return new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
+        }
+
+        public void HasCollided(Spider spider)
+        {
+            Rectangle spiderBounds = spider.GetBounds();
+            Rectangle shipBounds = GetBounds();
+
+            if (shipBounds.Intersects(spiderBounds))
+            {
+                if (!spider.HasDisappeared())
+                {
+                    spider.Disappear();
+
+                    if (spider.Velocity < 0)
+                    {
+                        spider.SetPosition(_position.X + _texture.Width);
+                    }
+                    else
+                    {
+                        spider.SetPosition(_position.X - _texture.Width);
+                    }
+                }
+            }
+
+        }
     }
 }
 
