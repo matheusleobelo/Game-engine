@@ -1,2 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/stars.jpg","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/stars.xnb","TextureProcessor","Texture2DContent",427514,1879825,0,2129783
+"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/ship.png","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/ship.xnb","TextureProcessor","Texture2DContent",19853,129685,0,1365563
+"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/shoot.png","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/shoot.xnb","TextureProcessor","Texture2DContent",454,1205,0,0017817
+"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spider.png","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/spider.xnb","TextureProcessor","Texture2DContent",52031,119893,0,00682
+"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spiderSprite.png","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/spiderSprite.xnb","TextureProcessor","Texture2DContent",43476,6789205,0,2013074
+"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/stars.jpg","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/stars.xnb","TextureProcessor","Texture2DContent",450498,5639305,0,27722

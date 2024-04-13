@@ -7,9 +7,11 @@
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/ship.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/shoot.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spider.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spiderSprite.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/stars.jpg</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
