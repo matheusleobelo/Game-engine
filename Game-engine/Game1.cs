@@ -12,6 +12,9 @@ namespace Game_engine
         private Ship _ship;
         private Spider _spider;
 
+         // Adicione uma textura para o projétil
+        private Texture2D _projectileTexture;
+
 
 
         public Game1()
@@ -33,9 +36,7 @@ namespace Game_engine
             Globals.SCREEN_HEIGHT = _graphics.PreferredBackBufferHeight;
 
 
-            _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 130), 5.0f);
-            // _ship.Initialize();
-            
+            _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 130), 5.0f, _projectileTexture);
             _spider = new Spider(Content.Load<Texture2D>("spider"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 880), 3.0f);
             _spider.Initialize();
 
@@ -45,6 +46,9 @@ namespace Game_engine
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _background = Content.Load<Texture2D>("stars");
+
+            // Carrega a textura do projétil
+            _projectileTexture = Content.Load<Texture2D>("shoot");
         }
 
         protected override void Update(GameTime gameTime)
