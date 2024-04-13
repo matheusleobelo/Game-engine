@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Game_engine
 {
@@ -10,17 +11,19 @@ namespace Game_engine
         private Vector2 _position;
         private float _speed;
 
-        public Ship(Texture2D texture, Vector2 position, float speed)
+
+        private Texture2D _projectileTexture;
+        private List<Projectile> _projectiles = new List<Projectile>();
+        private float _shootCooldown = 0.5f;
+        private float _shootTimer = 0f;
+        public Ship(Texture2D texture, Vector2 position, float speed, Texture2D projectileTexture)
         {
             _texture = texture;
             _position = position;
             _speed = speed;
+            _projectileTexture = projectileTexture;
         }
 
-        // public void Initialize()
-        // {
-        //     Globals.SHIP_WIDTH = _texture.Width;
-        // }
 
         public void Update(GameTime gameTime)
         {
@@ -34,6 +37,32 @@ namespace Game_engine
             {
                 _position.X += _speed;
             }
+            if (keyboardState.IsKeyDown(Keys.W))
+            {
+                _position.Y -= _speed;
+            }
+            if (keyboardState.IsKeyDown(Keys.S))
+            {
+                _position.Y += _speed;
+            }
+
+            // Atualiza o temporizador de disparo
+            _shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+
+            if (keyboardState.IsKeyDown(Keys.Space) && _shootTimer <= 0)
+            {
+                Shoot();
+                // Reseta o temporizador de disparo
+                _shootTimer = _shootCooldown;
+            }
+
+            // Atualiza os projéteis
+            foreach (Projectile projectile in _projectiles)
+            {
+                projectile.Update();
+            }
+
 
 
             if (_position.X < 0)
@@ -49,9 +78,49 @@ namespace Game_engine
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, _position, Color.White);
+            
+            // Desenha os projéteis
+            foreach (Projectile projectile in _projectiles)
+            {
+                projectile.Draw(spriteBatch);
+            }
         }
 
+
+
+        public Rectangle GetBounds()
+        {
+            return new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
+        }
+
+        public void HasCollided(Spider spider)
+        {
+            Rectangle spiderBounds = spider.GetBounds();
+            Rectangle shipBounds = GetBounds();
+
+            if (shipBounds.Intersects(spiderBounds))
+            {
+                if (!spider.HasDisappeared())
+                {
+                    spider.Disappear();
+
+                    if (spider.Velocity < 0)
+                    {
+                        spider.SetPosition(_position.X + _texture.Width);
+                    }
+                    else
+                    {
+                        spider.SetPosition(_position.X - _texture.Width);
+                    }
+                }
+            }
+
+        }
+
+        private void Shoot()
+        {
+            Projectile newProjectile = new Projectile(_projectileTexture, new Vector2(_position.X + _texture.Width / 2 - _projectileTexture.Width / 2, _position.Y), _speed);
+            _projectiles.Add(newProjectile);
+        }
     }
 }
-
-//
