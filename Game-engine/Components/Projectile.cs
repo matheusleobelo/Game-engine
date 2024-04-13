@@ -18,7 +18,7 @@ namespace Game_engine
 
         public void Update()
         {
-            // Move o projétil para cima (ou em outra direção, dependendo do seu jogo)
+            // Move o projétil para cima 
             _position.Y -= _speed;
 
             // Remove o projétil quando ele sai da tela
