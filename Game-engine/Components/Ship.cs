@@ -94,28 +94,23 @@ namespace Game_engine
         }
 
         public void HasCollided(Spider spider)
+{
+    Rectangle spiderBounds = spider.GetBounds();
+
+    // Verifica colisão entre os projéteis e a aranha
+    foreach (Projectile projectile in _projectiles)
+    {
+        Rectangle projectileBounds = projectile.GetBounds();
+
+        if (projectileBounds.Intersects(spiderBounds))
         {
-            Rectangle spiderBounds = spider.GetBounds();
-            Rectangle shipBounds = GetBounds();
-
-            if (shipBounds.Intersects(spiderBounds))
-            {
-                if (!spider.HasDisappeared())
-                {
-                    spider.Disappear();
-
-                    if (spider.Velocity < 0)
-                    {
-                        spider.SetPosition(_position.X + _texture.Width);
-                    }
-                    else
-                    {
-                        spider.SetPosition(_position.X - _texture.Width);
-                    }
-                }
-            }
-
+            // Remove o projétil
+            _projectiles.Remove(projectile);
+            break; 
         }
+    }
+}
+
 
         private void Shoot()
         {

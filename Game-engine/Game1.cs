@@ -31,19 +31,22 @@ namespace Game_engine
         }
 
         protected override void Initialize()
-        {
-            base.Initialize();
+{
+    base.Initialize();
 
-            Globals.SCREEN_WIDTH = _graphics.PreferredBackBufferWidth;
-            Globals.SCREEN_HEIGHT = _graphics.PreferredBackBufferHeight;
+    Globals.SCREEN_WIDTH = _graphics.PreferredBackBufferWidth;
+    Globals.SCREEN_HEIGHT = _graphics.PreferredBackBufferHeight;
 
-            _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 130), 5.0f, _projectileTexture);
-            _spider = new Spider(Content.Load<Texture2D>("spider"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 880), 3.0f);
-            _spider.Initialize();
+    _projectileTexture = Content.Load<Texture2D>("shoot");
 
-            // Define a posição inicial do fundo 
-            _backgroundPosition = new Vector2(0, -(_background.Height - _graphics.PreferredBackBufferHeight));
-        }
+    // Cria a instância da nave passando a textura do projétil
+    _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 130), 5.0f, _projectileTexture);
+    _spider = new Spider(Content.Load<Texture2D>("spider"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 880), 3.0f);
+    _spider.Initialize();
+
+    _backgroundPosition = new Vector2(0, -(_background.Height - _graphics.PreferredBackBufferHeight));
+}
+
 
         protected override void LoadContent()
         {

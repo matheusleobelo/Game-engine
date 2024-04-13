@@ -18,20 +18,18 @@ namespace Game_engine
 
         public void Update()
         {
-            // Move o projétil para cima 
-            _position.Y -= _speed;
-
-            // Remove o projétil quando ele sai da tela
-            if (_position.Y < -_texture.Height)
-            {
-                // Remover o projétil da lista ou definir uma flag para removê-lo
-                // Isso depende de como você está gerenciando os projéteis em seu jogo
-            }
+            _position.Y -= _speed; // Move o projétil para cima
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, _position, Color.White);
+        }
+
+        // Define o retângulo delimitador do projétil
+        public Rectangle GetBounds()
+        {
+            return new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
         }
     }
 }

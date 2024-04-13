@@ -51,9 +51,10 @@ C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.Ge
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.AssemblyInfoInputs.cache
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.AssemblyInfo.cs
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.csproj.CoreCompileInputs.cache
-C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.csproj.CopyComplete
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.dll
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\refint\Game-engine.dll
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.pdb
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.genruntimeconfig.cache
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\ref\Game-engine.dll
+C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.sourcelink.json
+C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-eng.54C6CF8C.Up2Date
