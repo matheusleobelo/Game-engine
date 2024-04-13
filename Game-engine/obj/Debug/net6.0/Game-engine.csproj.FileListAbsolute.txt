@@ -58,3 +58,6 @@ C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.ge
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\ref\Game-engine.dll
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-engine.sourcelink.json
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-eng.54C6CF8C.Up2Date
+C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-1.xnb
+C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-2.xnb
+C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-3.xnb

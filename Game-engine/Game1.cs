@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Game_engine
 {
@@ -12,11 +13,7 @@ namespace Game_engine
         private Vector2 _backgroundPosition = Vector2.Zero; // Posição do fundo
         private Ship _ship;
         private Spider _spider;
-
-        // Adicione uma textura para o projétil
         private Texture2D _projectileTexture;
-
-        // Velocidade de movimento do fundo
         private const float BACKGROUND_SPEED = 100.0f;
 
         public Game1()
@@ -30,22 +27,23 @@ namespace Game_engine
             _graphics.ApplyChanges();
         }
 
-        protected override void Initialize()
-{
-    base.Initialize();
-
-    Globals.SCREEN_WIDTH = _graphics.PreferredBackBufferWidth;
-    Globals.SCREEN_HEIGHT = _graphics.PreferredBackBufferHeight;
-
-    _projectileTexture = Content.Load<Texture2D>("shoot");
-
-    // Cria a instância da nave passando a textura do projétil
-    _ship = new Ship(Content.Load<Texture2D>("ship"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 130), 5.0f, _projectileTexture);
-    _spider = new Spider(Content.Load<Texture2D>("spider"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 880), 3.0f);
-    _spider.Initialize();
-
-    _backgroundPosition = new Vector2(0, -(_background.Height - _graphics.PreferredBackBufferHeight));
-}
+protected override void Initialize()
+        {
+            base.Initialize();
+            Globals.SCREEN_WIDTH = _graphics.PreferredBackBufferWidth;
+            Globals.SCREEN_HEIGHT = _graphics.PreferredBackBufferHeight;
+            _projectileTexture = Content.Load<Texture2D>("shoot");
+            List<Texture2D> shipTextures = new List<Texture2D>()
+            {
+                Content.Load<Texture2D>("sprites-ship/ship-1"),
+                Content.Load<Texture2D>("sprites-ship/ship-2"),
+                Content.Load<Texture2D>("sprites-ship/ship-3")
+            };
+            _ship = new Ship(shipTextures, new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 130), 5.0f, _projectileTexture);
+            _spider = new Spider(Content.Load<Texture2D>("spider"), new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - 880), 3.0f);
+            _spider.Initialize();
+            _backgroundPosition = new Vector2(0, -(_background.Height - _graphics.PreferredBackBufferHeight));
+        }
 
 
         protected override void LoadContent()
