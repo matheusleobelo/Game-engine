@@ -12,6 +12,10 @@ namespace Game_engine
         private bool right;
         private bool left;
 
+        private bool _disappeared = false;
+
+        public float Velocity { get => _speed;}
+
 
         public Spider(Texture2D texture, Vector2 position, float speed)
         {
@@ -59,7 +63,30 @@ namespace Game_engine
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            if (!_disappeared)
+            {
+            spriteBatch.Draw(_texture, _position, Color.White);                
+            }
+        }
+
+        public Rectangle GetBounds()
+        {
+            return new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
+        }
+
+        public bool HasDisappeared()
+        {
+            return _disappeared;
+        }
+
+        public void Disappear()
+        {
+            _disappeared = true;
+        }
+
+        public void SetPosition(float X)
+        {
+            _position.X = X;
         }
 
     }
