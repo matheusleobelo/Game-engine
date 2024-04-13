@@ -1,6 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
+
 
 namespace Game_engine
 {
@@ -11,13 +13,18 @@ namespace Game_engine
         private float _speed;
 
 
-        public Ship(Texture2D texture, Vector2 position, float speed)
+        private Texture2D _projectileTexture;
+        private List<Projectile> _projectiles = new List<Projectile>();
+        private float _shootCooldown = 0.5f;
+        private float _shootTimer = 0f;
+
+        public Ship(Texture2D texture, Vector2 position, float speed, Texture2D projectileTexture)
         {
             _texture = texture;
             _position = position;
             _speed = speed;
+            _projectileTexture = projectileTexture;
         }
-
 
         public void Update(GameTime gameTime)
         {
@@ -40,6 +47,16 @@ namespace Game_engine
                 _position.Y += _speed;
             }
 
+            // Atualiza o temporizador de disparo
+            _shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+
+            if (keyboardState.IsKeyDown(Keys.Space) && _shootTimer <= 0)
+            {
+                Shoot();
+                // Reseta o temporizador de disparo
+                _shootTimer = _shootCooldown;
+            }
 
             if (_position.X < 0)
             {
@@ -49,42 +66,32 @@ namespace Game_engine
             {
                 _position.X = Globals.SCREEN_WIDTH - _texture.Width;
             }
+
+            // Atualiza os projéteis
+            foreach (Projectile projectile in _projectiles)
+            {
+                projectile.Update();
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, _position, Color.White);
-        }
 
-        public Rectangle GetBounds()
-        {
-            return new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
-        }
-
-        public void HasCollided(Spider spider)
-        {
-            Rectangle spiderBounds = spider.GetBounds();
-            Rectangle shipBounds = GetBounds();
-
-            if (shipBounds.Intersects(spiderBounds))
+            // Desenha os projéteis
+            foreach (Projectile projectile in _projectiles)
             {
-                if (!spider.HasDisappeared())
-                {
-                    spider.Disappear();
-
-                    if (spider.Velocity < 0)
-                    {
-                        spider.SetPosition(_position.X + _texture.Width);
-                    }
-                    else
-                    {
-                        spider.SetPosition(_position.X - _texture.Width);
-                    }
-                }
+                projectile.Draw(spriteBatch);
             }
+        }
 
+        private void Shoot()
+        {
+            // Cria um novo projétil na posição da nave
+            Projectile newProjectile = new Projectile(_projectileTexture, new Vector2(_position.X + _texture.Width / 2 - _projectileTexture.Width / 2, _position.Y), _speed);
+             _projectiles.Add(newProjectile);
+
+            
         }
     }
 }
-
-//
