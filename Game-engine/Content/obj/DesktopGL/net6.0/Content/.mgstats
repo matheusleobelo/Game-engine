@@ -1,7 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/projects/Nassau/Game-engine/Game-engine/Content/exit_button.png","D:/projects/Nassau/Game-engine/Game-engine/Content/bin/DesktopGL/Content/exit_button.xnb","TextureProcessor","Texture2DContent",1766,11125,0,1024048
-"D:/projects/Nassau/Game-engine/Game-engine/Content/play_button.png","D:/projects/Nassau/Game-engine/Game-engine/Content/bin/DesktopGL/Content/play_button.xnb","TextureProcessor","Texture2DContent",1979,11125,0,0018713
-"D:/projects/Nassau/Game-engine/Game-engine/Content/ship.png","D:/projects/Nassau/Game-engine/Game-engine/Content/bin/DesktopGL/Content/ship.xnb","TextureProcessor","Texture2DContent",19853,129685,0,0046006
-"D:/projects/Nassau/Game-engine/Game-engine/Content/shoot.png","D:/projects/Nassau/Game-engine/Game-engine/Content/bin/DesktopGL/Content/shoot.xnb","TextureProcessor","Texture2DContent",454,1205,0,0013141
-"D:/projects/Nassau/Game-engine/Game-engine/Content/spider.png","D:/projects/Nassau/Game-engine/Game-engine/Content/bin/DesktopGL/Content/spider.xnb","TextureProcessor","Texture2DContent",52031,119893,0,0054085
-"D:/projects/Nassau/Game-engine/Game-engine/Content/stars.jpg","D:/projects/Nassau/Game-engine/Game-engine/Content/bin/DesktopGL/Content/stars.xnb","TextureProcessor","Texture2DContent",450498,5639305,0,1587646

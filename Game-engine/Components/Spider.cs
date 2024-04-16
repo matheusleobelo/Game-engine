@@ -14,7 +14,7 @@ namespace Game_engine
 
         private bool _disappeared = false;
 
-        public float Velocity { get => _speed;}
+        public float Velocity { get => _speed; }
 
 
         public Spider(Texture2D texture, Vector2 position, float speed)
@@ -30,7 +30,7 @@ namespace Game_engine
             left = false;
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(float deltaTime)
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
@@ -65,7 +65,7 @@ namespace Game_engine
         {
             if (!_disappeared)
             {
-            spriteBatch.Draw(_texture, _position, Color.White);                
+                spriteBatch.Draw(_texture, _position, Color.White);
             }
         }
 

@@ -25,7 +25,7 @@ namespace Game_engine
         }
 
 
-        public void Update(GameTime gameTime)
+        public void Update(float deltaTime)
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
@@ -47,7 +47,7 @@ namespace Game_engine
             }
 
             // Atualiza o temporizador de disparo
-            _shootTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            _shootTimer -= deltaTime;
 
 
             if (keyboardState.IsKeyDown(Keys.Space) && _shootTimer <= 0)
@@ -78,7 +78,7 @@ namespace Game_engine
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, _position, Color.White);
-            
+
             // Desenha os projéteis
             foreach (Projectile projectile in _projectiles)
             {

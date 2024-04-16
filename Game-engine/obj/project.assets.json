@@ -102,19 +102,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\playe\\.nuget\\packages\\": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\Nassau\\Game-engine\\Game-engine\\Game-engine.csproj",
+      "projectUniqueName": "E:\\Nassau\\Game-engine\\Game-engine\\Game-engine.csproj",
       "projectName": "Game-engine",
-      "projectPath": "D:\\projects\\Nassau\\Game-engine\\Game-engine\\Game-engine.csproj",
-      "packagesPath": "C:\\Users\\playe\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\Nassau\\Game-engine\\Game-engine\\obj\\",
+      "projectPath": "E:\\Nassau\\Game-engine\\Game-engine\\Game-engine.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "E:\\Nassau\\Game-engine\\Game-engine\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\playe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -163,7 +163,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.315\\RuntimeIdentifierGraph.json"
       }
     }
   }

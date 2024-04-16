@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Mtr86VsgwHig5cjYrbfOYUY6EYhxbnqk9TbkkIBYuoztl+RSqN6gg5tA8EvGXk5v3t5zj/R1I/UZOsWvcpzwqA==",
+  "dgSpecHash": "Pg379jjOAX0fTRyWEfuci8kVhf7oIVofitswkNjvdA5P4EGfc0KfpE+CQyNJY10zHCpsDssOPa51NXCVzRSIsA==",
   "success": true,
-  "projectFilePath": "D:\\projects\\Nassau\\Game-engine\\Game-engine\\Game-engine.csproj",
+  "projectFilePath": "E:\\Nassau\\Game-engine\\Game-engine\\Game-engine.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\playe\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\playe\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+    "C:\\Users\\Dell\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
   ],
   "logs": []
 }

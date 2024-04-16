@@ -4,12 +4,12 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/projects/Nassau/Game-engine/Game-engine/Content/exit_button.png</File>
-    <File>D:/projects/Nassau/Game-engine/Game-engine/Content/play_button.png</File>
-    <File>D:/projects/Nassau/Game-engine/Game-engine/Content/ship.png</File>
-    <File>D:/projects/Nassau/Game-engine/Game-engine/Content/shoot.png</File>
-    <File>D:/projects/Nassau/Game-engine/Game-engine/Content/spider.png</File>
-    <File>D:/projects/Nassau/Game-engine/Game-engine/Content/stars.jpg</File>
+    <File>E:/Nassau/Game-engine/Game-engine/Content/exit_button.png</File>
+    <File>E:/Nassau/Game-engine/Game-engine/Content/play_button.png</File>
+    <File>E:/Nassau/Game-engine/Game-engine/Content/ship.png</File>
+    <File>E:/Nassau/Game-engine/Game-engine/Content/shoot.png</File>
+    <File>E:/Nassau/Game-engine/Game-engine/Content/spider.png</File>
+    <File>E:/Nassau/Game-engine/Game-engine/Content/stars.jpg</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
