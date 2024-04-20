@@ -4,16 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/exit_button.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/menu-background.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/play_button.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/ship.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/shoot.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/spider.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/sprites-ship/ship-1.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/sprites-ship/ship-2.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/sprites-ship/ship-3.png</File>
-    <File>C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/stars.jpg</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/exit_button.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/menu-background.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/play_button.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/ship.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/shoot.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spider.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-1.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-2.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-3.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/stars.jpg</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

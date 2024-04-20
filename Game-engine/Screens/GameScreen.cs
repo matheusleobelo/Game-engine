@@ -31,7 +31,7 @@ public class GameScreen : IScreen
             shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-3"));
 
         _ship = new Ship(shipTextures, content.Load<Texture2D>("shoot"), new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT - 130), 5.0f);
-        _spider = new Spider(content.Load<Texture2D>("spider"), new Vector2(Globals.SCREEN_WIDTH / 2, 0), 3.0f);
+        _spider = new Spider(content.Load<Texture2D>("spider"), content.Load<Texture2D>("spiderSprite"), new Vector2(Globals.SCREEN_WIDTH / 2, 0), 3.0f);
         Texture2D backgroundImage = content.Load<Texture2D>("stars");
         _backgroundI = new GameObject(backgroundImage);
 

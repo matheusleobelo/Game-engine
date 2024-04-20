@@ -126,3 +126,10 @@ C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprite
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-2.xnb
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-3.xnb
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\menu-background.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\spiderSprite.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\exit_button.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\menu-background.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\play_button.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-1.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-2.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-3.xnb
