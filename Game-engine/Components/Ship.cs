@@ -3,26 +3,32 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-
 namespace Game_engine
 {
     public class Ship
     {
-        private Texture2D _texture;
-        private Vector2 _position;
-        private float _speed;
+        private List<Texture2D> _shipTextures; // Lista de texturas para a animação da nave
+        private int _currentFrame;
+        private float _frameTimer;
+        private float _frameDuration;
 
         private Texture2D _projectileTexture;
+        private Vector2 _position;
+        private float _speed;
         private List<Projectile> _projectiles;
-        private const float FIRE_RATE = 0.5f; // tempo em segundos entre cada tiro
+        private const float FIRE_RATE = 0.5f;
         private float _fireCooldown;
 
-        public Ship(Texture2D texture, Texture2D projectileTexture, Vector2 position, float speed)
+        public Ship(List<Texture2D> shipTextures, Texture2D projectileTexture, Vector2 position, float speed)
         {
-            _texture = texture;
+            _shipTextures = shipTextures; // Alteração: atribui a lista de texturas fornecida
+            _currentFrame = 0;
+            _frameTimer = 0.0f;
+            _frameDuration = 0.1f;
+
+            _projectileTexture = projectileTexture;
             _position = position;
             _speed = speed;
-            _projectileTexture = projectileTexture;
             _projectiles = new List<Projectile>();
             _fireCooldown = 0.0f;
         }
@@ -52,31 +58,41 @@ namespace Game_engine
             {
                 _position.X = 0;
             }
-            else if (_position.X > Globals.SCREEN_WIDTH - _texture.Width)
+            else if (_position.X > Globals.SCREEN_WIDTH - _shipTextures[0].Width) // Alteração: usa a largura do primeiro quadro da animação
             {
-                _position.X = Globals.SCREEN_WIDTH - _texture.Width;
+                _position.X = Globals.SCREEN_WIDTH - _shipTextures[0].Width; // Alteração: usa a largura do primeiro quadro da animação
             }
 
-            // Atualiza os projéteis
             foreach (Projectile projectile in _projectiles)
             {
                 projectile.Update(deltaTime);
             }
 
-            // Cooldown de disparo
             _fireCooldown -= deltaTime;
 
-            // Disparo quando a tecla de espaço é pressionada
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && _fireCooldown <= 0)
             {
                 Fire();
                 _fireCooldown = FIRE_RATE;
             }
+
+            // Atualiza o contador de tempo para trocar os quadros da animação
+            _frameTimer += deltaTime;
+
+            if (_frameTimer >= _frameDuration)
+            {
+                _currentFrame++;
+                if (_currentFrame >= _shipTextures.Count)
+                {
+                    _currentFrame = 0;
+                }
+                _frameTimer = 0.0f;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            spriteBatch.Draw(_shipTextures[_currentFrame], _position, Color.White); // Alteração: desenha o quadro atual da animação
 
             foreach (Projectile projectile in _projectiles)
             {
@@ -86,31 +102,29 @@ namespace Game_engine
 
         public Rectangle GetBounds()
         {
-            return new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
+            return new Rectangle((int)_position.X, (int)_position.Y, _shipTextures[_currentFrame].Width, _shipTextures[_currentFrame].Height); // Alteração: usa a largura e a altura do quadro atual da animação
         }
 
         public void HasCollided(Spider spider)
-{
-    Rectangle spiderBounds = spider.GetBounds();
-
-    foreach (Projectile projectile in _projectiles)
-    {
-        Rectangle projectileBounds = projectile.GetBounds();
-
-        if (projectileBounds.Intersects(spiderBounds))
         {
-            _projectiles.Remove(projectile); // Desativa o projétil quando colide com a aranha
-            break; // Não é necessário continuar verificando os outros projéteis
-        }
-    }
-}
+            Rectangle spiderBounds = spider.GetBounds();
 
+            foreach (Projectile projectile in _projectiles)
+            {
+                Rectangle projectileBounds = projectile.GetBounds();
+
+                if (projectileBounds.Intersects(spiderBounds))
+                {
+                    _projectiles.Remove(projectile);
+                    break;
+                }
+            }
+        }
 
         private void Fire()
         {
-            // Cria um novo projétil e o ativa na posição da nave
             Projectile newProjectile = new Projectile(_projectileTexture, _position, 10.0f);
-            newProjectile.Activate(new Vector2(_position.X + (_texture.Width / 2) - (_projectileTexture.Width / 2), _position.Y));
+            newProjectile.Activate(new Vector2(_position.X + (_shipTextures[_currentFrame].Width / 2) - (_projectileTexture.Width / 2), _position.Y));
             _projectiles.Add(newProjectile);
         }
     }

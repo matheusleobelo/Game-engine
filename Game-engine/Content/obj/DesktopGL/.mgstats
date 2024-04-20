@@ -1,1 +1,10 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/exit_button.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/exit_button.xnb","TextureProcessor","Texture2DContent",1766,11125,0,0884261
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/play_button.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/play_button.xnb","TextureProcessor","Texture2DContent",1979,11125,0,0016156
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/ship.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/ship.xnb","TextureProcessor","Texture2DContent",19853,129685,0,0039501
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/shoot.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/shoot.xnb","TextureProcessor","Texture2DContent",454,1205,0,0013884
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/spider.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/spider.xnb","TextureProcessor","Texture2DContent",52031,119893,0,0039815
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/sprites-ship/ship-1.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/sprites-ship/ship-1.xnb","TextureProcessor","Texture2DContent",11735,40085,0,0042754
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/sprites-ship/ship-2.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/sprites-ship/ship-2.xnb","TextureProcessor","Texture2DContent",12668,40085,0,0022839
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/sprites-ship/ship-3.png","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/sprites-ship/ship-3.xnb","TextureProcessor","Texture2DContent",13139,40085,0,002728
+"C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/stars.jpg","C:/Users/Matheus/Desktop/Game-engine/Game-engine/Content/bin/DesktopGL/stars.xnb","TextureProcessor","Texture2DContent",450498,5639305,0,1228818

@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Game_engine;
 
@@ -24,7 +25,12 @@ public class GameScreen : IScreen
 
     public void LoadContent(ContentManager content)
     {
-        _ship = new Ship(content.Load<Texture2D>("ship"), content.Load<Texture2D>("shoot"), new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT - 130), 5.0f);
+        List<Texture2D> shipTextures = new List<Texture2D>(); // Lista de texturas para a animação da nave
+            shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-1"));
+            shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-2"));
+            shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-3"));
+
+        _ship = new Ship(shipTextures, content.Load<Texture2D>("shoot"), new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT - 130), 5.0f);
         _spider = new Spider(content.Load<Texture2D>("spider"), new Vector2(Globals.SCREEN_WIDTH / 2, 0), 3.0f);
         Texture2D backgroundImage = content.Load<Texture2D>("stars");
         _backgroundI = new GameObject(backgroundImage);
