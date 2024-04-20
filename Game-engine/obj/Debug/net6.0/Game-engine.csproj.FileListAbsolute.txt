@@ -125,3 +125,4 @@ C:\Users\Matheus\Desktop\Game-engine\Game-engine\obj\Debug\net6.0\Game-eng.54C6C
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-1.xnb
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-2.xnb
 C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-3.xnb
+C:\Users\Matheus\Desktop\Game-engine\Game-engine\bin\Debug\net6.0\Content\menu-background.xnb
