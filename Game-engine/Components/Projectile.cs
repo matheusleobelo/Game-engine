@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace Game_engine
 {
@@ -8,30 +9,51 @@ namespace Game_engine
         private Texture2D _texture;
         private Vector2 _position;
         private float _speed;
+        private bool _isActive;
 
         public Projectile(Texture2D texture, Vector2 position, float speed)
         {
             _texture = texture;
             _position = position;
-            _speed = speed;
+            _speed = 300.0f;;
+            _isActive = false;
         }
 
-        public void Update()
+        public void Update(float deltaTime)
         {
-            // Move o projétil para cima (ou em outra direção, dependendo do seu jogo)
-            _position.Y -= _speed;
-
-            // Remove o projétil quando ele sai da tela
-            if (_position.Y < -_texture.Height)
+            if (_isActive)
             {
-                // Remover o projétil da lista ou definir uma flag para removê-lo
-                // Isso depende de como você está gerenciando os projéteis em seu jogo
+                _position.Y -= _speed * deltaTime;
             }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            if (_isActive)
+            {
+                spriteBatch.Draw(_texture, _position, Color.White);
+            }
+        }
+
+        public void Activate(Vector2 position)
+        {
+            _position = position;
+            _isActive = true;
+        }
+
+        public Rectangle GetBounds()
+        {
+            return new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
+        }
+
+        public bool IsActive()
+        {
+            return _isActive;
+        }
+
+        public void Deactivate()
+        {
+            _isActive = false;
         }
     }
 }

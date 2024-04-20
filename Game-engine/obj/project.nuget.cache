@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Pg379jjOAX0fTRyWEfuci8kVhf7oIVofitswkNjvdA5P4EGfc0KfpE+CQyNJY10zHCpsDssOPa51NXCVzRSIsA==",
+  "dgSpecHash": "T1OzcQeFdmluU8HFmx95CoBAhdhA4jIreJOuaJONa5VvOz6fEngCj+J1tdAU+NBgDsAVXHwK/VjktM9+nHhyuA==",
   "success": true,
-  "projectFilePath": "E:\\Nassau\\Game-engine\\Game-engine\\Game-engine.csproj",
+  "projectFilePath": "C:\\Users\\Matheus\\Desktop\\Game-engine\\Game-engine\\Game-engine.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dell\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+    "C:\\Users\\Matheus\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
   ],
   "logs": []
 }
