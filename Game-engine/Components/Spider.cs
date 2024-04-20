@@ -7,6 +7,7 @@ namespace Game_engine
     public class Spider
     {
         private Texture2D _texture;
+        private Texture2D _texture2;
         private Vector2 _position;
 
 
@@ -24,9 +25,10 @@ namespace Game_engine
         public float Velocity { get => _speed; }
 
 
-        public Spider(Texture2D texture, Vector2 position, float speed)
+        public Spider(Texture2D texture, Texture2D texture2, Vector2 position, float speed)
         {
             _texture = texture;
+            _texture2 = texture2;
             _position = position;
             _speed = speed;
         }
@@ -35,6 +37,7 @@ namespace Game_engine
         {
             right = true;
             left = false;
+
 
             _frames = new Rectangle[10]
             {
@@ -72,7 +75,7 @@ namespace Game_engine
 
             if (right)
             {
-                if (_position.X < Globals.SCREEN_WIDTH - _texture.Width)
+                if (_position.X < Globals.SCREEN_WIDTH - 416)
                 {
                     _position.X += _speed;
                 }
@@ -101,7 +104,8 @@ namespace Game_engine
         {
             if (!_disappeared)
             {
-                spriteBatch.Draw(_texture, _position, _frames[_index], Color.White);
+                // spriteBatch.Draw(_texture, _position, _frames[_index], Color.White);
+                spriteBatch.Draw(_texture2, _position, _frames[_index], Color.White);
             }
         }
 
@@ -126,7 +130,4 @@ namespace Game_engine
         }
 
     }
-
-
-
 }
