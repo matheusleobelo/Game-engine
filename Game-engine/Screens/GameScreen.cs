@@ -18,6 +18,7 @@ public class GameScreen : IScreen
     {
         // base.Initialize();
         _spider.Initialize();
+        _ship.Initialize();
 
         // Define a posição inicial do fundo 
         _backgroundI.Position = new Point(0, -(_backgroundI.Bounds.Height - Globals.SCREEN_HEIGHT));
@@ -30,7 +31,7 @@ public class GameScreen : IScreen
             shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-2"));
             shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-3"));
 
-        _ship = new Ship(shipTextures, content.Load<Texture2D>("shoot"), new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT - 130), 5.0f);
+        _ship = new Ship(shipTextures, content.Load<Texture2D>("shoot"), content.Load<Texture2D>("lifeBar5"), new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT - 130), 5.0f);
         _spider = new Spider(content.Load<Texture2D>("spider"), content.Load<Texture2D>("spiderSprite"), new Vector2(Globals.SCREEN_WIDTH / 2, 0), 3.0f);
         Texture2D backgroundImage = content.Load<Texture2D>("stars");
         _backgroundI = new GameObject(backgroundImage);

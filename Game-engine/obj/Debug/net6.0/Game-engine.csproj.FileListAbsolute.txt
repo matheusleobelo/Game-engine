@@ -133,3 +133,4 @@ C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\play_bu
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-1.xnb
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-2.xnb
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-3.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\lifeBar5.xnb

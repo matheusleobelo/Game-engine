@@ -12,6 +12,13 @@ namespace Game_engine
         private float _frameTimer;
         private float _frameDuration;
 
+
+        private Texture2D _lifeBar;
+        private Rectangle[] _frames;
+        private int _index;
+        private double _time;
+
+
         private Texture2D _projectileTexture;
         private Vector2 _position;
         private float _speed;
@@ -19,12 +26,14 @@ namespace Game_engine
         private const float FIRE_RATE = 0.5f;
         private float _fireCooldown;
 
-        public Ship(List<Texture2D> shipTextures, Texture2D projectileTexture, Vector2 position, float speed)
+        public Ship(List<Texture2D> shipTextures, Texture2D projectileTexture, Texture2D lifeBar, Vector2 position, float speed)
         {
             _shipTextures = shipTextures; // Alteração: atribui a lista de texturas fornecida
             _currentFrame = 0;
             _frameTimer = 0.0f;
             _frameDuration = 0.1f;
+
+            _lifeBar = lifeBar;
 
             _projectileTexture = projectileTexture;
             _position = position;
@@ -33,9 +42,35 @@ namespace Game_engine
             _fireCooldown = 0.0f;
         }
 
+        public void Initialize()
+        {
+            _frames = new Rectangle[5]
+{
+    new Rectangle(0, 0, 42*5, 7*5),
+    new Rectangle(48*5, 0, 42*5, 7*5),
+    new Rectangle(96*5, 0, 42*5, 7*5),
+    new Rectangle(144*5, 0, 42*5, 7*5),
+    new Rectangle(192*5, 0, 42*5, 7*5),
+};
+
+            _index = 0;
+            _time = 0.0f;
+        }
+
         public void Update(float deltaTime)
         {
             KeyboardState keyboardState = Keyboard.GetState();
+
+            _time = _time += deltaTime;
+            if (_time > 0.1)
+            {
+                _time = 0.0;
+                _index++;
+                if (_index > 4)
+                {
+                    _index = 0;
+                }
+            }
 
             if (keyboardState.IsKeyDown(Keys.A))
             {
@@ -93,6 +128,8 @@ namespace Game_engine
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_shipTextures[_currentFrame], _position, Color.White); // Alteração: desenha o quadro atual da animação
+            spriteBatch.Draw(_lifeBar, new Vector2(0, 650), _frames[_index], Color.White);
+
 
             foreach (Projectile projectile in _projectiles)
             {
