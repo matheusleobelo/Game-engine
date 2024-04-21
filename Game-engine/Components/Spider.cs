@@ -38,20 +38,21 @@ namespace Game_engine
             right = true;
             left = false;
 
-            _frames = new Rectangle[10]
+_frames = new Rectangle[10]
 {
-    // Coordenadas para cada quadro na sprite sheet (organizada em 4 colunas por 3 linhas)
-    new Rectangle(0, 0, 416, 340),      // Quadro 1 (coluna 1, linha 1)
-    new Rectangle(416, 0, 416, 340),    // Quadro 2 (coluna 2, linha 1)
-    new Rectangle(832, 0, 416, 340),    // Quadro 3 (coluna 3, linha 1)
-    new Rectangle(1248, 0, 416, 340),   // Quadro 4 (coluna 4, linha 1)
-    new Rectangle(0, 340, 416, 340),    // Quadro 5 (coluna 1, linha 2)
-    new Rectangle(416, 340, 416, 340),  // Quadro 6 (coluna 2, linha 2)
-    new Rectangle(832, 340, 416, 340),  // Quadro 7 (coluna 3, linha 2)
-    new Rectangle(1248, 340, 416, 340), // Quadro 8 (coluna 4, linha 2)
-    new Rectangle(0, 680, 416, 340),    // Quadro 9 (coluna 1, linha 3)
-    new Rectangle(416, 680, 416, 340)   // Quadro 10 (coluna 2, linha 3)
+    // Coordenadas ajustadas para cada quadro na nova sprite sheet (organizada em 4 colunas por 3 linhas)
+    new Rectangle(0, 0, 312, 255),          // Quadro 1 (coluna 1, linha 1)
+    new Rectangle(312, 0, 312, 255),        // Quadro 2 (coluna 2, linha 1)
+    new Rectangle(624, 0, 312, 255),        // Quadro 3 (coluna 3, linha 1)
+    new Rectangle(936, 0, 312, 255),        // Quadro 4 (coluna 4, linha 1)
+    new Rectangle(0, 255, 312, 255),        // Quadro 5 (coluna 1, linha 2)
+    new Rectangle(312, 255, 312, 255),      // Quadro 6 (coluna 2, linha 2)
+    new Rectangle(624, 255, 312, 255),      // Quadro 7 (coluna 3, linha 2)
+    new Rectangle(936, 255, 312, 255),      // Quadro 8 (coluna 4, linha 2)
+    new Rectangle(0, 510, 312, 255),        // Quadro 9 (coluna 1, linha 3)
+    new Rectangle(312, 510, 312, 255)       // Quadro 10 (coluna 2, linha 3)
 };
+
 
             _index = 0;
             _time = 0.0f;
@@ -74,7 +75,7 @@ namespace Game_engine
 
             if (right)
             {
-                if (_position.X < Globals.SCREEN_WIDTH - _texture.Width)
+                if (_position.X < Globals.SCREEN_WIDTH - 312)
                 {
                     _position.X += _speed;
                 }
