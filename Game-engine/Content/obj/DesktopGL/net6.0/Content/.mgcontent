@@ -11,6 +11,7 @@
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/ship.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/shoot.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spider.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spiderLifeBar.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spiderSprite.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-1.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-2.png</File>
@@ -18,6 +19,7 @@
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/stars.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

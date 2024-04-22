@@ -19,6 +19,9 @@ namespace Game_engine
         private double _time;
 
 
+        private int _index2;
+
+
         private Texture2D _projectileTexture;
         private Vector2 _position;
         private float _speed;
@@ -55,6 +58,7 @@ namespace Game_engine
 
             _index = 0;
             _time = 0.0f;
+            _index2 = 0;
         }
 
         public void Update(float deltaTime)
@@ -152,10 +156,24 @@ namespace Game_engine
 
                 if (projectileBounds.Intersects(spiderBounds))
                 {
+                    if (_index2 < 5)
+                {
+                _index2++;                    
+                }
+                else
+                {
+                    _index2 = 0;
+                }
                     _projectiles.Remove(projectile);
                     break;
-                }
+                    
+                }               
             }
+        }
+
+        public int GetIndex2()
+        {
+            return _index2;
         }
 
         private void Fire()

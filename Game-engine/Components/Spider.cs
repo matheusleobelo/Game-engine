@@ -12,9 +12,19 @@ namespace Game_engine
 
         private Vector2 _position;
 
+
+
+private Texture2D _spiderLifeBar;
         private Rectangle[] _frames;
         private int _index;
         private double _time;
+
+
+
+        private Rectangle[] _frames2;
+        private int _index2;
+
+
 
         private float _speed;
         private bool right;
@@ -25,12 +35,14 @@ namespace Game_engine
         public float Velocity { get => _speed; }
 
 
-        public Spider(Texture2D texture, Texture2D texture2, Vector2 position, float speed)
+        public Spider(Texture2D texture, Texture2D texture2, Texture2D spiderLifeBar, Vector2 position, float speed)
         {
             _texture = texture;
             _texture2 = texture2;
             _position = position;
             _speed = speed;
+
+            _spiderLifeBar = spiderLifeBar;
         }
 
         public void Initialize()
@@ -38,8 +50,8 @@ namespace Game_engine
             right = true;
             left = false;
 
-_frames = new Rectangle[10]
-{
+            _frames = new Rectangle[10]
+            {
     // Coordenadas ajustadas para cada quadro na nova sprite sheet (organizada em 4 colunas por 3 linhas)
     new Rectangle(0, 0, 312, 255),          // Quadro 1 (coluna 1, linha 1)
     new Rectangle(312, 0, 312, 255),        // Quadro 2 (coluna 2, linha 1)
@@ -51,11 +63,23 @@ _frames = new Rectangle[10]
     new Rectangle(936, 255, 312, 255),      // Quadro 8 (coluna 4, linha 2)
     new Rectangle(0, 510, 312, 255),        // Quadro 9 (coluna 1, linha 3)
     new Rectangle(312, 510, 312, 255)       // Quadro 10 (coluna 2, linha 3)
-};
+            };
 
 
             _index = 0;
             _time = 0.0f;
+
+            _frames2 = new Rectangle[6]
+{
+    new Rectangle(0, 0, 42*5, 11 *5),
+    new Rectangle(48*5, 0, 42*5, 11*5),
+    new Rectangle(96*5, 0, 42*5, 11*5),
+    new Rectangle(144*5, 0, 42*5, 11*5),
+    new Rectangle(192*5, 0, 42*5, 11*5),
+    new Rectangle(240*5, 0, 42*5, 11*5),
+};
+
+            _index2 = 0;
         }
 
         public void Update(float deltaTime)
@@ -72,6 +96,9 @@ _frames = new Rectangle[10]
                     _index = 0;
                 }
             }
+
+
+            
 
             if (right)
             {
@@ -106,7 +133,7 @@ _frames = new Rectangle[10]
             {
                 // spriteBatch.Draw(_texture, _position, Color.White);
                 spriteBatch.Draw(_texture2, _position, _frames[_index], Color.White);
-
+                spriteBatch.Draw(_spiderLifeBar, _position, _frames2[_index2], Color.White);
             }
         }
 
@@ -128,6 +155,11 @@ _frames = new Rectangle[10]
         public void SetPosition(float X)
         {
             _position.X = X;
+        }
+
+        public void GetIndex2(int index)
+        {
+            _index2 = index;
         }
 
     }
