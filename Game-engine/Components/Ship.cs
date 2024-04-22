@@ -132,7 +132,7 @@ namespace Game_engine
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_shipTextures[_currentFrame], _position, Color.White); // Alteração: desenha o quadro atual da animação
-            spriteBatch.Draw(_lifeBar, new Vector2(0, 650), _frames[_index], Color.White);
+            spriteBatch.Draw(_lifeBar, new Vector2(0, 650), _frames[0], Color.White);
 
 
             foreach (Projectile projectile in _projectiles)
@@ -157,17 +157,18 @@ namespace Game_engine
                 if (projectileBounds.Intersects(spiderBounds))
                 {
                     if (_index2 < 5)
-                {
-                _index2++;                    
-                }
-                else
-                {
-                    _index2 = 0;
-                }
+                    {
+                        _index2++;
+                    }
+                    else
+                    {
+                        Globals.GameInstance.ChangeScreen(EScreen.End);
+                        _index2 = 0;
+                    }
                     _projectiles.Remove(projectile);
                     break;
-                    
-                }               
+
+                }
             }
         }
 

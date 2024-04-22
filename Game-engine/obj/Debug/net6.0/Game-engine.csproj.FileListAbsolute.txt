@@ -135,3 +135,4 @@ C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites-ship\ship-3.xnb
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\lifeBar5.xnb
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\spiderLifeBar.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\EndScreen.xnb

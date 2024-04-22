@@ -10,6 +10,7 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
     private IScreen _menuScreen;
     private IScreen _gameScreen;
+    private IScreen _endScreen;
     private IScreen _currentScreen;
 
     public Game1()
@@ -32,6 +33,9 @@ public class Game1 : Game
                 break;
             case EScreen.Game:
                 _currentScreen = _gameScreen;
+                break;
+                case EScreen.End:
+                _currentScreen = _endScreen;
                 break;
         }
 
@@ -56,6 +60,9 @@ public class Game1 : Game
 
         _gameScreen = new GameScreen();
         _gameScreen.LoadContent(Content);
+
+        _endScreen = new EndScreen();
+        _endScreen.LoadContent(Content);
 
         _currentScreen = _menuScreen;
     }
