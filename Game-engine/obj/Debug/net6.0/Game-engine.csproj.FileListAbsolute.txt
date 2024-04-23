@@ -136,3 +136,5 @@ C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\sprites
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\lifeBar5.xnb
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\spiderLifeBar.xnb
 C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\EndScreen.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\CristaisColoridos.xnb
+C:\Work\WorkSpace\Jogos\Game-engine\Game-engine\bin\Debug\net6.0\Content\EncodeSansExpanded-Medium.xnb

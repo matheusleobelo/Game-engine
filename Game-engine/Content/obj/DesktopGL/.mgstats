@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/EndScreen.png","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/EndScreen.xnb","TextureProcessor","Texture2DContent",1069673,2250085,0,2517683
+"C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/EncodeSansExpanded-Medium.spritefont","C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/bin/DesktopGL/EncodeSansExpanded-Medium.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0,2424557

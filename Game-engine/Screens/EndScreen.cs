@@ -9,11 +9,15 @@ public class EndScreen : IScreen
     private Button _playButton;
     private Button _exitButton;
 
+    private SpriteFont _spriteFont;
+
     public void LoadContent(ContentManager content)
     {
         _backgroundTexture = content.Load<Texture2D>("EndScreen");
         _playButton = new Button(content.Load<Texture2D>("play_button"), Play);
         _exitButton = new Button(content.Load<Texture2D>("exit_button"), Exit);
+
+        _spriteFont =  content.Load<SpriteFont>("EncodeSansExpanded-Medium");
     }
 
     public void Initialize()
@@ -33,6 +37,7 @@ public class EndScreen : IScreen
         spriteBatch.Draw(_backgroundTexture, Vector2.Zero, Color.White);
         _playButton.Draw(spriteBatch);
         _exitButton.Draw(spriteBatch);
+        spriteBatch.DrawString(_spriteFont, "Score: 5000"  , new Vector2(315, 375), Color.White);
     }
 
     private void Play()

@@ -4,6 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/CristaisColoridos.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/EncodeSansExpanded-Medium.spritefont</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/EndScreen.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/exit_button.png</File>
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/lifeBar5.png</File>
@@ -20,6 +22,8 @@
     <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/stars.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

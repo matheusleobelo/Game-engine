@@ -26,6 +26,9 @@ private Texture2D _spiderLifeBar;
 
 
 
+
+
+
         private float _speed;
         private bool right;
         private bool left;
@@ -78,6 +81,8 @@ private Texture2D _spiderLifeBar;
     new Rectangle(192*5, 0, 42*5, 11*5),
     new Rectangle(240*5, 0, 42*5, 11*5),
 };
+
+            
 
             _index2 = 0;
         }

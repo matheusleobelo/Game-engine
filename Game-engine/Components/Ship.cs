@@ -19,6 +19,11 @@ namespace Game_engine
         private double _time;
 
 
+        // private Rectangle[] _frames3;
+        private int _points;
+
+
+
         private int _index2;
 
 
@@ -56,9 +61,23 @@ namespace Game_engine
     new Rectangle(192*5, 0, 42*5, 7*5),
 };
 
+    //         _frames3 = new Rectangle[6]
+    //         {
+    // new Rectangle(0, 0, 52, 50),
+    // new Rectangle(64, 0, 52, 50),
+    // new Rectangle(128, 0, 52, 50),
+    // new Rectangle(192, 0, 52, 50),
+    // new Rectangle(256, 0, 52, 50),
+    // new Rectangle(320, 0, 52, 50),
+
+    //         };
+
             _index = 0;
             _time = 0.0f;
             _index2 = 0;
+
+
+            _points = 4;
         }
 
         public void Update(float deltaTime)
@@ -132,7 +151,7 @@ namespace Game_engine
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_shipTextures[_currentFrame], _position, Color.White); // Alteração: desenha o quadro atual da animação
-            spriteBatch.Draw(_lifeBar, new Vector2(0, 650), _frames[0], Color.White);
+            spriteBatch.Draw(_lifeBar, new Vector2(0, 650), _frames[_points], Color.White);
 
 
             foreach (Projectile projectile in _projectiles)
@@ -156,9 +175,19 @@ namespace Game_engine
 
                 if (projectileBounds.Intersects(spiderBounds))
                 {
+
                     if (_index2 < 5)
                     {
                         _index2++;
+
+                        if (_points > 0)
+                        {
+                        _points--;                            
+                        }
+                        else
+                        {
+                            _points = 0;
+                        }
                     }
                     else
                     {
