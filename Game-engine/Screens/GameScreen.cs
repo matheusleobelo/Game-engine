@@ -10,14 +10,12 @@ public class GameScreen : IScreen
 {
     private GameObject _backgroundI;
     private Ship _ship;
-    private Texture2D _projectileTexture;
     private Spider _spider;
     private const float BACKGROUND_SPEED = 100.0f;
     private int _index2;
 
     public void Initialize()
     {
-        // base.Initialize();
         _spider.Initialize();
         _ship.Initialize();
 
@@ -28,17 +26,20 @@ public class GameScreen : IScreen
     public void LoadContent(ContentManager content)
     {
         List<Texture2D> shipTextures = new List<Texture2D>(); // Lista de texturas para a animação da nave
-            shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-1"));
-            shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-2"));
-            shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-3"));
+        shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-1"));
+        shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-2"));
+        shipTextures.Add(content.Load<Texture2D>("sprites-ship/ship-3"));
 
-        _ship = new Ship(shipTextures, content.Load<Texture2D>("shoot"), content.Load<Texture2D>("lifeBar5"), new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT - 130), 5.0f);
-        _spider = new Spider(content.Load<Texture2D>("spider"), content.Load<Texture2D>("spiderSprite"), content.Load<Texture2D>("spiderLifeBar"), new Vector2(Globals.SCREEN_WIDTH / 2, 0), 3.0f);
+        _ship = new Ship(shipTextures, content.Load<Texture2D>("shoot"), content.Load<Texture2D>("lifeBar5"), new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT - 130), 5.0f);      
         Texture2D backgroundImage = content.Load<Texture2D>("stars");
         _backgroundI = new GameObject(backgroundImage);
 
-        // Carrega a textura do projétil
-        _projectileTexture = content.Load<Texture2D>("shoot");
+        Texture2D spiderTexture = content.Load<Texture2D>("spider");
+        Texture2D spiderAnimation = content.Load<Texture2D>("spiderSprite");
+        Texture2D spiderLifeBar = content.Load<Texture2D>("spiderLifeBar");
+        Texture2D cobwebTexture = content.Load<Texture2D>("cobweb"); // Carregar a textura do projétil de teia
+
+        _spider = new Spider(spiderTexture, spiderAnimation, spiderLifeBar, cobwebTexture, new Vector2(Globals.SCREEN_WIDTH / 2, 0), 3.0f);
     }
 
     public void Update(float deltaTime)
@@ -48,10 +49,10 @@ public class GameScreen : IScreen
             Globals.GameInstance.ChangeScreen(EScreen.Menu);
         }
 
-        // move a imagm de fundo para baixo
+        // Move a imagem de fundo para baixo
         _backgroundI.Y += (int)(BACKGROUND_SPEED * deltaTime);
 
-        //  reinicia a posição da imagem
+        // Reinicia a posição da imagem
         if (_backgroundI.Y >= 0)
             _backgroundI.Y = -(_backgroundI.Bounds.Height - Globals.SCREEN_HEIGHT);
 
@@ -61,7 +62,6 @@ public class GameScreen : IScreen
         _ship.HasCollided(_spider);
         _index2 = _ship.GetIndex2();
         _spider.GetIndex2(_index2);
-
     }
 
     public void Draw(SpriteBatch spriteBatch)
@@ -70,5 +70,4 @@ public class GameScreen : IScreen
         _ship.Draw(spriteBatch);
         _spider.Draw(spriteBatch);
     }
-
 }

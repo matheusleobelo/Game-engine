@@ -4,24 +4,26 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/CristaisColoridos.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/EncodeSansExpanded-Medium.spritefont</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/EndScreen.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/exit_button.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/lifeBar5.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/menu-background.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/play_button.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/ship.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/shoot.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spider.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spiderLifeBar.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/spiderSprite.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-1.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-2.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/sprites-ship/ship-3.png</File>
-    <File>C:/Work/WorkSpace/Jogos/Game-engine/Game-engine/Content/stars.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/cobweb.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/CristaisColoridos.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/EncodeSansExpanded-Medium.spritefont</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/EndScreen.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/exit_button.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/lifeBar5.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/menu-background.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/play_button.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/ship.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/shoot.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/spider.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/spiderLifeBar.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/spiderSprite.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/sprites-ship/ship-1.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/sprites-ship/ship-2.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/sprites-ship/ship-3.png</File>
+    <File>C:/Work/WorkSpace/Jogos/Monogame/Game-engine/Game-engine/Content/stars.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
