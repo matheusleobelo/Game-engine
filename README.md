@@ -1,23 +1,89 @@
-# Game-engine
+# Game-Engine
 
-Description
-This project is a game developed using MonoGame and is inspired by Space Invaders.
+Um jogo inspirado em *Space Invaders*, desenvolvido com **MonoGame** em C#. Ele serve tanto como um pequeno projeto divertido quanto como base de estudos para quem quer aprender a criar jogos 2D.
 
-Commands
-dotnet build: This command is used to check for any issues in your code and build the project.
+---
 
-dotnet run: Use this command to run the game and start playing.
+## 📚 Recursos
 
-dotnet mgcb-editor: Use this command to open the content pipeline editor, which enables you to add sprites, fonts, and other assets to your game.
+* Feito em C#, usando MonoGame (framework de jogos 2D/3D).
+* Arquitetura básica para jogar, movimentar inimigos, detectar colisões, gerenciar telas (menu, jogo, game over), etc.
+* Pipeline de conteúdos (sprites, fontes, efeitos visuais) via *MGCB Editor*.
+* Código organizado para facilitar extensão: incluir novos inimigos, power-ups, níveis, etc.
 
---------------------------------------------------------------------------------------------------------------------------
+---
 
-Descrição
-Um jogo construído com MonoGame inspirado em Space Invaders.
+## ⚙️ Pré-requisitos
 
-Comandos
-dotnet build: Use este comando para testar e construir o seu projeto. Ele verifica se há erros no código e compila o projeto.
+Para compilar e rodar este projeto, você vai precisar:
 
-dotnet run: Use este comando para executar o seu projeto e jogar o jogo.
+* [.NET SDK](https://dotnet.microsoft.com/) (versão compatível — teste com a versão que o projeto especifica ou a mais recente estável)
+* MonoGame instalado/configurado
+* Acesso ao `mgcb-editor` para gerenciar assets
 
-dotnet mgcb-editor: Use este comando para abrir o editor de pipeline de conteúdo do projeto. Isso permite adicionar sprites, fontes e outros recursos do jogo.
+---
+
+## 🚀 Como executar
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/matheusleobelo/Game-engine.git
+   cd Game-engine
+   ```
+
+2. Restaurar dependências / construir:
+
+   ```bash
+   dotnet build
+   ```
+
+3. Para rodar o jogo:
+
+   ```bash
+   dotnet run
+   ```
+
+4. Para editar ou adicionar novos recursos visuais (sprites, fontes, sons etc.), abra o pipeline de conteúdo:
+
+   ```bash
+   dotnet mgcb-editor
+   ```
+
+---
+
+## 🧩 Estrutura do Projeto
+
+Descrevendo os diretórios mais importantes e para que servem:
+
+| Pasta / Arquivo | Descrição                                                                                                 |
+| --------------- | --------------------------------------------------------------------------------------------------------- |
+| **Content/**    | Aqui ficam sprites, fontes, sons e outros assets do jogo.                                                 |
+| **GameEngine/** | Código-fonte principal: lógica de jogo, classes de inimigo, jogador, estados (menu, jogo, game over) etc. |
+| **Program.cs**  | Ponto de entrada do aplicativo.                                                                           |
+| **Game1.cs**    | Classe principal que gerencia o ciclo do jogo (inicialização, atualização, desenho).                      |
+
+---
+
+## 💡 Como contribuir / evoluir
+
+Algumas ideias de melhorias que podem ser feitas, se quiser expandir o jogo:
+
+* Adicionar múltiplos níveis com dificuldade crescente
+* Introduzir power-ups ou bônus para jogador
+* Sistema de pontuação e ranking local
+* Animações e efeitos visuais adicionais
+* Sons e músicas de fundo
+* Melhorias de UI (menus, telas de game over/instruções)
+* Testes unitários para lógica de jogo
+
+Se quiser contribuir, sinta-se à vontade para abrir *issues* ou *pull requests*. Sugestões, correções de bugs, ideias novas são bem-vindas!
+
+---
+
+## 🔧 Tecnologias usadas
+
+* **C#**
+* **MonoGame**
+* .NET SDK
+* MGCB Content Pipeline
